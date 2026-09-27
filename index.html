@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Pietro ♡</title>
+<style>
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fff7fb;
+    color: #4c2939;
+    overflow-x: hidden;
+}
+/* =========================
+   DECORACIÓN DEL FONDO
+========================= */
+body::before {
+    content: "♡  ✦  ⋆  ♡  ✧  ♡  ⋆  ✦  ♡";
+    position: fixed;
+    top: 8%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: rgba(184, 91, 124, 0.16);
+    font-size: 25px;
+    letter-spacing: 28px;
+    pointer-events: none;
+    z-index: 0;
+}
+body::after {
+    content: "✦  ♡  ⋆  ♡  ✧  ⋆  ♡  ✦";
+    position: fixed;
+    bottom: 8%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: rgba(184, 91, 124, 0.13);
+    font-size: 23px;
+    letter-spacing: 25px;
+    pointer-events: none;
+    z-index: 0;
+}
+.decor {
+    position: fixed;
+    pointer-events: none;
+    z-index: 1;
+    opacity: .35;
+    animation: floating 8s infinite ease-in-out;
+}
+.decor.one {
+    top: 17%;
+    left: 5%;
+    font-size: 25px;
+}
+.decor.two {
+    top: 35%;
+    right: 6%;
+    font-size: 20px;
+    animation-delay: 2s;
+}
+.decor.three {
+    top: 65%;
+    left: 8%;
+    font-size: 18px;
+    animation-delay: 4s;
+}
+.decor.four {
+    top: 80%;
+    right: 9%;
+    font-size: 28px;
+    animation-delay: 1s;
+}
+.decor.five {
+    top: 50%;
+    left: 48%;
+    font-size: 15px;
+    animation-delay: 3s;
+}
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-25px) rotate(8deg);
+    }
+}
+/* =========================
+   PORTADA
+========================= */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    position: relative;
+    z-index: 2;
+    background:
+        radial-gradient(circle at 15% 20%, #ffdce9, transparent 30%),
+        radial-gradient(circle at 85% 80%, #f7cada, transparent 32%),
+        linear-gradient(135deg, #fff8fb, #fff0f6);
+}
+.hero-content {
+    max-width: 900px;
+    animation: entrance 1.5s ease;
+}
+.small-title {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 13px;
+    color: #a25b78;
+    margin-bottom: 25px;
+}
+.hero h1 {
+    font-size: clamp(55px, 11vw, 115px);
+    line-height: .9;
+    color: #8e3e60;
+    margin-bottom: 25px;
+}
+.hero h2 {
+    font-size: clamp(22px, 4vw, 36px);
+    font-weight: normal;
+    color: #704153;
+    margin-bottom: 25px;
+}
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.8;
+}
+.button {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 40px;
+    background: #a94f73;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .3s;
+    box-shadow: 0 10px 25px rgba(169,79,115,.22);
+}
+.button:hover {
+    transform: translateY(-5px);
+    background: #8f3d5f;
+}
+/* =========================
+   SECCIONES
+========================= */
+section {
+    padding: 105px 8%;
+    position: relative;
+    z-index: 2;
+}
+.section-title {
+    text-align: center;
+    font-size: clamp(36px, 6vw, 58px);
+    color: #8e3e60;
+    margin-bottom: 20px;
+}
+.section-subtitle {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 60px;
+    line-height: 1.8;
+    font-size: 17px;
+}
+/* =========================
+   PARA MI PERSONA FAVORITA
+========================= */
+.favorite {
+    background: #fff;
+}
+.favorite-box {
+    max-width: 900px;
+    margin: auto;
+    padding: 55px;
+    border-radius: 35px;
+    background: linear-gradient(145deg, #fff7fa, #fff0f5);
+    border: 1px solid #f1cad8;
+    box-shadow: 0 20px 55px rgba(100,45,70,.08);
+    text-align: center;
+}
+.favorite-box p {
+    font-size: 20px;
+    line-height: 1.9;
+}
+/* =========================
+   NUESTRA HISTORIA
+========================= */
+.story {
+    background:
+        radial-gradient(circle at 10% 20%, #ffe0ea, transparent 25%),
+        #fff7fa;
+}
+.story-container {
+    max-width: 900px;
+    margin: auto;
+}
+.story-card {
+    background: rgba(255,255,255,.9);
+    border-radius: 30px;
+    padding: 38px;
+    margin-bottom: 25px;
+    box-shadow: 0 12px 35px rgba(90,45,65,.08);
+    border-left: 5px solid #d889a5;
+}
+.story-card span {
+    color: #a44c70;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.story-card h3 {
+    margin: 10px 0;
+    color: #8e3e60;
+    font-size: 25px;
+}
+.story-card p {
+    line-height: 1.8;
+    font-size: 17px;
+}
+/* =========================
+   LO FELIZ QUE ME HACÉS
+========================= */
+.happy {
+    background: #fff;
+    text-align: center;
+}
+.happy-box {
+    max-width: 850px;
+    margin: auto;
+}
+.happy-main {
+    font-size: clamp(25px, 4vw, 38px);
+    color: #934363;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+.happy-small {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+.happy-item {
+    padding: 30px 20px;
+    border-radius: 25px;
+    background: #fff5f8;
+    border: 1px solid #f1cfdb;
+    transition: .3s;
+}
+.happy-item:hover {
+    transform: translateY(-7px);
+}
+.happy-item .emoji {
+    font-size: 35px;
+    display: block;
+    margin-bottom: 12px;
+}
+.happy-item p {
+    line-height: 1.6;
+}
+/* =========================
+   COSAS QUE AMO DE ÉL
+========================= */
+.love {
+    background: #fff0f5;
+}
+.love-grid {
+    max-width: 1050px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+}
+.love-card {
+    background: white;
+    padding: 32px 25px;
+    border-radius: 28px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(90,45,65,.07);
+    transition: .35s;
+}
+.love-card:hover {
+    transform: translateY(-8px);
+}
+.love-card .emoji {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 15px;
+}
+.love-card h3 {
+    color: #8e3e60;
+    margin-bottom: 12px;
+}
+.love-card p {
+    line-height: 1.7;
+}
+/* =========================
+   RECUERDO
+========================= */
+.memory {
+    background: #fff;
+}
+.memory-box {
+    max-width: 850px;
+    margin: auto;
+    padding: 55px;
+    background: #fffaf4;
+    border-radius: 30px;
+    border: 1px solid #ead7c6;
+    box-shadow: 0 20px 50px rgba(80,50,35,.08);
+    text-align: center;
+}
+.memory-date {
+    color: #a36b55;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+.memory-box h3 {
+    font-size: 32px;
+    color: #8e4e40;
+    margin-bottom: 20px;
+}
+.memory-box p {
+    font-size: 18px;
+    line-height: 1.9;
+}
+/* =========================
+   LO QUE VIMOS
+========================= */
+.watch {
+    background:
+        radial-gradient(circle at 80% 15%, #eadcf4, transparent 28%),
+        #fdf9ff;
+}
+.watch-grid {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 18px;
+}
+.watch-card {
+    min-height: 150px;
+    padding: 25px 18px;
+    background: rgba(255,255,255,.85);
+    border: 1px solid #dfd0e7;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: .3s;
+}
+.watch-card:hover {
+    transform: scale(1.04) rotate(-1deg);
+    box-shadow: 0 12px 30px rgba(70,50,80,.1);
+}
+.watch-card .number {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #a96a91;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+.watch-card h3 {
+    color: #754361;
+    font-size: 18px;
+}
+/* =========================
+   DECISIONES
+========================= */
+.decisions {
+    background: #fff;
+    text-align: center;
+}
+.choice-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 850px;
+    margin: 35px auto;
+}
+.choice {
+    padding: 16px 25px;
+    border: 1px solid #dfa1b9;
+    background: #fff7fa;
+    border-radius: 35px;
+    color: #783d56;
+    cursor: pointer;
+    font-size: 15px;
+    transition: .3s;
+}
+.choice:hover {
+    background: #f4d1de;
+    transform: scale(1.05);
+}
+.choice-result {
+    max-width: 700px;
+    min-height: 90px;
+    margin: 30px auto;
+    font-size: 19px;
+    line-height: 1.8;
+    color: #8e3e60;
+}
+/* =========================
+   RAZÓN
+========================= */
+.reason {
+    background: #fff0f5;
+    text-align: center;
+}
+.reason-box {
+    max-width: 800px;
+    margin: auto;
+    padding: 60px 40px;
+    background: white;
+    border-radius: 35px;
+    box-shadow: 0 20px 50px rgba(100,45,70,.08);
+}
+.reason-box .big-heart {
+    font-size: 65px;
+    color: #c75d83;
+    margin-bottom: 20px;
+}
+.reason-box p {
+    font-size: 23px;
+    line-height: 1.8;
+    color: #783d56;
+}
+/* =========================
+   CARTA
+========================= */
+.letter {
+    background: #fff;
+}
+.letter-paper {
+    max-width: 850px;
+    margin: auto;
+    background: #fffdf8;
+    padding: clamp(35px, 7vw, 70px);
+    box-shadow: 0 20px 55px rgba(70,40,40,.12);
+    border-radius: 8px;
+    position: relative;
+}
+.letter-paper::before {
+    content: "♡";
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    font-size: 38px;
+    color: #d88ca7;
+}
+.letter-paper p {
+    font-size: 19px;
+    line-height: 2;
+    margin-bottom: 22px;
+}
+.signature {
+    text-align: right;
+    color: #8e3e60;
+    font-size: 26px;
+    margin-top: 40px;
+}
+/* =========================
+   FELIZ DÍA
+========================= */
+.special {
+    min-height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background:
+        radial-gradient(circle at 20% 20%, #ffd6e5, transparent 30%),
+        radial-gradient(circle at 80% 80%, #f2bfd2, transparent 30%),
+        #fff3f8;
+}
+.special-content {
+    max-width: 900px;
+}
+.special h2 {
+    font-size: clamp(45px, 9vw, 90px);
+    color: #8e3e60;
+    margin-bottom: 15px;
+}
+.special h3 {
+    font-size: clamp(25px, 5vw, 45px);
+    color: #a94f73;
+    margin-bottom: 30px;
+}
+.special p {
+    font-size: 20px;
+    line-height: 1.9;
+}
+/* =========================
+   FINAL
+========================= */
+.final {
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #8e3e60;
+    color: white;
+}
+.final h2 {
+    font-size: clamp(40px, 8vw, 75px);
+    margin-bottom: 25px;
+}
+.final p {
+    max-width: 720px;
+    margin: auto;
+    font-size: 20px;
+    line-height: 1.9;
+}
+.final .button {
+    background: white;
+    color: #8e3e60;
+}
+/* =========================
+   ANIMACIÓN
+========================= */
+@keyframes entrance {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* =========================
+   CELULAR
+========================= */
+@media (max-width: 700px) {
+    section {
+        padding: 80px 6%;
+    }
+    .favorite-box,
+    .memory-box,
+    .reason-box {
+        padding: 32px 22px;
+    }
+    .hero h1 {
+        font-size: 58px;
+    }
+    .hero p {
+        font-size: 16px;
+    }
+    .favorite-box p,
+    .happy-main,
+    .memory-box p,
+    .reason-box p {
+        font-size: 18px;
+    }
+}
+</style>
+</head>
+<body>
+<!-- DECORACIÓN -->
+<div class="decor one">♡</div>
+<div class="decor two">✦</div>
+<div class="decor three">♡</div>
+<div class="decor four">✧</div>
+<div class="decor five">⋆</div>
+<!-- =========================
+     PORTADA
+========================= -->
+<header class="hero">
+    <div class="hero-content">
+        <div class="small-title">
+            Para mi persona favorita
+        </div>
+        <h1>Agustina ♡ Pietro</h1>
+        <h2>
+            Una pequeña parte de todo lo que somos.
+        </h2>
+        <p>
+            Una página hecha para guardar un poquito de nuestra historia,
+            de las cosas que vivimos y de todo lo que todavía nos queda por vivir.
+        </p>
+        <a href="#favorito" class="button">
+            ♡ Entrar
+        </a>
+    </div>
+</header>
+<!-- =========================
+     PERSONA FAVORITA
+========================= -->
+<section class="favorite" id="favorito">
+    <h2 class="section-title">
+        Para mi persona favorita 💗
+    </h2>
+    <p class="section-subtitle">
+        Casi 10 meses de nosotros.
+    </p>
+    <div class="favorite-box">
+        <p>
+            Si tuviera que explicar qué sos para mí, probablemente
+            me quedaría corta.
+        </p>
+        <br>
+        <p>
+            Sos mi novio, pero también sos mi mejor amigo.
+            Sos esa persona con la que puedo compartir absolutamente
+            cualquier cosa y sentir que estoy en el lugar correcto.
+        </p>
+        <br>
+        <p>
+            Y creo que eso es una de las cosas más lindas de nosotros:
+            no solamente nos queremos, también estamos creciendo
+            y aprendiendo uno con el otro.
+        </p>
+    </div>
+</section>
+<!-- =========================
+     NUESTRA HISTORIA
+========================= -->
+<section class="story">
+    <h2 class="section-title">
+        Nuestra historia ♡
+    </h2>
+    <p class="section-subtitle">
+        No fue un solo momento el que nos convirtió en nosotros.
+        Fueron todos los pequeños momentos que fuimos compartiendo.
+    </p>
+    <div class="story-container">
+        <div class="story-card">
+            <span>Al principio</span>
+            <h3>
+                Antes de ser nosotros
+            </h3>
+            <p>
+                Éramos amigos, nos conocíamos, compartíamos cosas
+                y poco a poco empezamos a descubrir que había algo
+                diferente entre nosotros.
+            </p>
+        </div>
+        <div class="story-card">
+            <span>Un momento especial</span>
+            <h3>
+                Cuando empezamos a acercarnos
+            </h3>
+            <p>
+                Hubo un momento en el que nuestras conversaciones,
+                nuestras ganas de hablar y la forma en la que
+                nos buscábamos empezaron a sentirse distintas.
+            </p>
+        </div>
+        <div class="story-card">
+            <span>El comienzo</span>
+            <h3>
+                Nuestra primera salida al cine
+            </h3>
+            <p>
+                Una salida que terminó siendo mucho más importante
+                de lo que imaginábamos y que se convirtió en uno
+                de los primeros capítulos de nuestra historia.
+            </p>
+        </div>
+        <div class="story-card">
+            <span>Nosotros</span>
+            <h3>
+                El momento en que empezamos a ser oficialmente nosotros
+            </h3>
+            <p>
+                Y desde entonces empezamos a construir algo nuestro:
+                con cariño, risas, aprendizajes, momentos inesperados
+                y muchísimas historias.
+            </p>
+        </div>
+        <div class="story-card">
+            <span>Hoy</span>
+            <h3>
+                Casi 10 meses después
+            </h3>
+            <p>
+                Seguimos acá. Conociéndonos cada vez más,
+                aprendiendo a compartir nuestras vidas y descubriendo
+                nuevas formas de querernos.
+            </p>
+        </div>
+    </div>
+</section>
+<!-- =========================
+     LO FELIZ QUE ME HACE
+========================= -->
+<section class="happy">
+    <h2 class="section-title">
+        Lo feliz que me hacés 🥹
+    </h2>
+    <p class="section-subtitle">
+        Hay personas que simplemente hacen que la vida se sienta
+        un poquito más linda.
+    </p>
+    <div class="happy-box">
+        <div class="happy-main">
+            Me hacés feliz de una forma que muchas veces
+            ni siquiera sé explicar.
+        </div>
+        <div class="happy-small">
+            <div class="happy-item">
+                <span class="emoji">😂</span>
+                <p>
+                    Me hacés reír incluso cuando no tenía pensado hacerlo.
+                </p>
+            </div>
+            <div class="happy-item">
+                <span class="emoji">🫂</span>
+                <p>
+                    Me hacés sentir acompañada.
+                </p>
+            </div>
+            <div class="happy-item">
+                <span class="emoji">🏠</span>
+                <p>
+                    Me hacés sentir que puedo estar tranquila siendo yo.
+                </p>
+            </div>
+            <div class="happy-item">
+                <span class="emoji">💗</span>
+                <p>
+                    Me hacés feliz simplemente estando.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- =========================
+     COSAS QUE AMO DE ÉL
+========================= -->
+<section class="love">
+    <h2 class="section-title">
+        Cosas que amo de vos 💗
+    </h2>
+    <p class="section-subtitle">
+        No solamente amo cómo me tratás. Amo quién sos.
+    </p>
+    <div class="love-grid">
+        <div class="love-card">
+            <span class="emoji">🧠</span>
+            <h3>Tu forma de pensar</h3>
+            <p>
+                Me encanta escucharte hablar y conocer tu manera
+                de ver las cosas.
+            </p>
+        </div>
+        <div class="love-card">
+            <span class="emoji">😂</span>
+            <h3>Tu humor</h3>
+            <p>
+                Especialmente esa capacidad tuya de convertir
+                cualquier situación en un chiste.
+            </p>
+        </div>
+        <div class="love-card">
+            <span class="emoji">🤍</span>
+            <h3>Tu forma de ser</h3>
+            <p>
+                Me gusta la persona que sos cuando nadie está
+                intentando decirte cómo tenés que ser.
+            </p>
+        </div>
+        <div class="love-card">
+            <span class="emoji">✨</span>
+            <h3>Tu personalidad</h3>
+            <p>
+                Hay algo en vos que hace que sea muy fácil
+                disfrutar simplemente de tu compañía.
+            </p>
+        </div>
+        <div class="love-card">
+            <span class="emoji">🎯</span>
+            <h3>Tu manera de esforzarte</h3>
+            <p>
+                Admiro cuando te proponés algo y realmente
+                intentás conseguirlo.
+            </p>
+        </div>
+        <div class="love-card">
+            <span class="emoji">🫶🏻</span>
+            <h3>Tu forma de querer</h3>
+            <p>
+                Me encanta conocer todas esas pequeñas formas
+                en las que demostrás lo que sentís.
+            </p>
+        </div>
+        <div class="love-card">
+            <span class="emoji">🌎</span>
+            <h3>Tu mundo</h3>
+            <p>
+                Me gusta conocer tus gustos, tus intereses,
+                tus series y todas esas cosas que te hacen ser vos.
+            </p>
+        </div>
+        <div class="love-card">
+            <span class="emoji">🥹</span>
+            <h3>Vos</h3>
+            <p>
+                Y simplemente amo que seas vos.
+                No hace falta una razón más complicada.
+            </p>
+        </div>
+    </div>
+</section>
+<!-- =========================
+     UN RECUERDO
+========================= -->
+<section class="memory">
+    <h2 class="section-title">
+        Un recuerdo que guardo conmigo 📸
+    </h2>
+    <p class="section-subtitle">
+        Hay momentos que quizás duran un rato,
+        pero se quedan muchísimo más tiempo.
+    </p>
+    <div class="memory-box">
+        <div class="memory-date">
+            Un momento nuestro
+        </div>
+        <h3>
+            Esa sensación de estar exactamente donde quería estar.
+        </h3>
+        <p>
+            Hay recuerdos nuestros que no necesito que hayan sido
+            enormes para que sean importantes.
+        </p>
+        <br>
+        <p>
+            A veces simplemente recuerdo estar con vos, mirarte,
+            reírnos o estar tranquilos juntos y pensar:
+            <strong>“qué lindo que sea él”.</strong>
+        </p>
+        <br>
+        <p>
+            Y creo que esos son los recuerdos que más quiero guardar:
+            los que quizás parecen pequeños, pero que para mí
+            significan muchísimo.
+        </p>
+    </div>
+</section>
+<!-- =========================
+     TODO LO QUE VIMOS
+========================= -->
+<section class="watch">
+    <h2 class="section-title">
+        Todo lo que vimos juntos 🎬
+    </h2>
+    <p class="section-subtitle">
+        Una pequeña colección de todas esas historias que fuimos
+        compartiendo entre nosotros.
+    </p>
+    <div class="watch-grid">
+        <div class="watch-card">
+            <div class="number">01</div>
+            <h3>Harry Potter 1</h3>
+        </div>
+        <div class="watch-card">
+            <div class="number">02</div>
+            <h3>The Mentalist</h3>
+        </div>
+        <div class="watch-card">
+            <div class="number">03</div>
+            <h3>Dramas griegos</h3>
+        </div>
+        <div class="watch-card">
+            <div class="number">04</div>
+            <h3>Gran Hermano</h3>
+        </div>
+        <div class="watch-card">
+            <div class="number">05</div>
+            <h3>Cómo entrenar a tu dragón</h3>
+        </div>
+        <div class="watch-card">
+            <div class="number">06</div>
+            <h3>Monster High</h3>
+        </div>
+        <div class="watch-card">
+            <div class="number">07</div>
+            <h3>JoJo's</h3>
+        </div>
+        <div class="watch-card">
+            <div class="number">08</div>
+            <h3>Enola Holmes 3</h3>
+        </div>
+        <div class="watch-card">
+            <div class="number">09</div>
+            <h3>Hoppers</h3>
+        </div>
+        <div class="watch-card">
+            <div class="number">10</div>
+            <h3>Zootopia 2</h3>
+        </div>
+        <div class="watch-card">
+            <div class="number">11</div>
+            <h3>Resident Evil</h3>
+        </div>
+        <div class="watch-card">
+            <div class="number">12</div>
+            <h3>Toy Story 5</h3>
+        </div>
+        <div class="watch-card">
+            <div class="number">13</div>
+            <h3>Gravity Falls</h3>
+        </div>
+        <div class="watch-card">
+            <div class="number">14</div>
+            <h3>Stranger Things</h3>
+        </div>
+    </div>
+</section>
+<!-- =========================
+     DECISIONES
+========================= -->
+<section class="decisions">
+    <h2 class="section-title">
+        Ahora elegí vos 💌
+    </h2>
+    <p class="section-subtitle">
+        Porque esta página no podía ser solamente leer y bajar.
+        Hay algunas cosas que tenés que elegir vos.
+    </p>
+    <div class="choice-buttons">
+        <button class="choice" onclick="choose('letter')">
+            💌 Una carta
+        </button>
+        <button class="choice" onclick="choose('memory')">
+            📸 Un recuerdo
+        </button>
+        <button class="choice" onclick="choose('reason')">
+            💗 Una razón
+        </button>
+        <button class="choice" onclick="choose('surprise')">
+            🎁 Una sorpresa
+        </button>
+    </div>
+    <div class="choice-result" id="choiceResult">
+        Elegí una opción...
+    </div>
+</section>
+<!-- =========================
+     RAZÓN
+========================= -->
+<section class="reason">
+    <h2 class="section-title">
+        Una razón para amarte 💗
+    </h2>
+    <div class="reason-box">
+        <div class="big-heart">
+            ♡
+        </div>
+        <p>
+            Porque con vos entendí que amar a alguien no es solamente
+            sentir muchísimo por esa persona. También es poder mirarla
+            y pensar que, entre todas las personas del mundo,
+            qué suerte haber coincidido justamente con ella.
+        </p>
+    </div>
+</section>
+<!-- =========================
+     CARTA
+========================= -->
+<section class="letter" id="carta">
+    <h2 class="section-title">
+        Una carta para vos 💌
+    </h2>
+    <div class="letter-paper">
+        <p>
+            Pietro:
+        </p>
+        <p>
+            Si llegaste hasta acá probablemente ya te diste cuenta
+            de que hice toda una página para vos. Y sí,
+            me tomé bastante en serio esto de hacerte un regalo.
+        </p>
+        <p>
+            Quiero que sepas que amo lo que somos.
+            Amo que podamos ser novios y al mismo tiempo seguir
+            sintiendo que somos mejores amigos.
+        </p>
+        <p>
+            Me encanta que podamos compartir cosas grandes,
+            pero también esas cosas pequeñas que quizás nadie más
+            entendería. Las risas, los chistes, las salidas,
+            las series, las películas y hasta esos momentos
+            en los que simplemente estamos juntos.
+        </p>
+        <p>
+            Me hace feliz pensar en cuánto cambiamos desde que
+            empezamos y en cómo seguimos aprendiendo uno del otro.
+        </p>
+        <p>
+            Gracias por ser vos.
+            Gracias por hacerme reír, por acompañarme,
+            por consentirme y por querer verme feliz.
+        </p>
+        <p>
+            Te amo muchísimo y me hace feliz saber que todavía
+            nos queda muchísimo por vivir.
+        </p>
+        <div class="signature">
+            Te amo ♡<br>
+            Agus
+        </div>
+    </div>
+</section>
+<!-- =========================
+     FELIZ DÍA DEL NOVIO
+========================= -->
+<section class="special">
+    <div class="special-content">
+        <div class="small-title">
+            3 de octubre
+        </div>
+        <h2>
+            FELIZ DÍA DEL NOVIO 💗
+        </h2>
+        <h3>
+            Al mejor novio del mundo.
+        </h3>
+        <p>
+            Gracias por ser mi novio,
+            mi mejor amigo y una de mis personas favoritas
+            en todo el mundo.
+            <br><br>
+            Gracias por estos casi 10 meses,
+            por todo lo que vivimos y por todo lo que todavía
+            nos queda por vivir.
+            <br><br>
+            Te amo muchísimo, Pietro.
+        </p>
+    </div>
+</section>
+<!-- =========================
+     FINAL
+========================= -->
+<section class="final">
+    <div>
+        <h2>
+            Esto recién empieza... ♡
+        </h2>
+        <p>
+            Casi 10 meses.
+            <br>
+            Miles de momentos.
+            <br>
+            Un montón de historias.
+            <br>
+            Y todavía muchísimo por vivir.
+            <br><br>
+            Gracias por ser parte de mi vida.
+        </p>
+        <a href="#favorito" class="button">
+            Volver al principio ♡
+        </a>
+    </div>
+</section>
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+<script>
+function choose(option) {
+    const result = document.getElementById("choiceResult");
+    if (option === "letter") {
+        result.innerHTML =
+        "💌 Elegiste una carta... Bajá un poquito más. Hay una esperándote.";
+        document.getElementById("carta").scrollIntoView({
+            behavior: "smooth"
+        });
+    }
+    if (option === "memory") {
+        result.innerHTML =
+        "📸 Hay recuerdos que parecen pequeños, pero terminan siendo de los más importantes. Seguí bajando para encontrar uno.";
+        setTimeout(() => {
+            document.querySelector(".memory").scrollIntoView({
+                behavior: "smooth"
+            });
+        }, 900);
+    }
+    if (option === "reason") {
+        result.innerHTML =
+        "💗 Elegiste una razón... y quizás esta sea una de las cosas que más me cuesta explicar con palabras.";
+        setTimeout(() => {
+            document.querySelector(".reason").scrollIntoView({
+                behavior: "smooth"
+            });
+        }, 900);
+    }
+    if (option === "surprise") {
+        result.innerHTML =
+        "🎁 La sorpresa está un poquito más adelante... seguí explorando.";
+        setTimeout(() => {
+            document.querySelector(".special").scrollIntoView({
+                behavior: "smooth"
+            });
+        }, 1000);
+    }
+}
+</script>
+</body>
+</html>
